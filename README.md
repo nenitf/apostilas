@@ -52,8 +52,8 @@ Dentro de cada repositorio EAD, com exceção de projeto unicamente de exemplos,
 
 |  Tipo  | Empresa/Editora |     Autores     | Nome |
 | ------ | --------------- | --------------- | ---- |
-| :feet: |                 |                 | [Programando em Go](https://gitlab.com/nenitf/ead-go) |
-| :book: |  Casa do código |  Caio Filipini  | [Programando em Go](https://gitlab.com/nenitf/ead-programando-em-go) |
+| :feet: |                 |                 | [Exemplos](https://gitlab.com/nenitf/ead-go)
+| :book: |  Casa do código |  Caio Filipini  | [Programando em Go](https://gitlab.com/nenitf/ead-programando-em-go)
 |:school:|  School of net  | Wesley Willians | [Iniciando com Go](https://gitlab.com/nenitf/ead-iniciando-com-go)
 |:school:|  School of net  | Wesley Willians | [Iniciando com Go OO](https://gitlab.com/nenitf/ead-iniciando-com-go-oo)
 |:school:|  School of net  | Wesley Willians | [Avançando com GO](https://gitlab.com/nenitf/ead-avancando-com-go)
