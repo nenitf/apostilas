@@ -1,0 +1,47 @@
+\documentclass{apostila}
+% cp ~/dev/dotfiles/cpfiles/latex/apostila.cls apostila.cls
+
+\title{GO}
+\author{Neni}
+\date{\today}
+
+\begin{document}
+\chapter{O que é GO}
+\begin{flushleft}
+
+    Golang é uma linguagem de programação criada pela Google para resolver seus problemas\cite[1]{cod3r}. Desenvolvida por Robert Griesemer, Rob Pike e Ken Thompson em 11/2009\cite[4]{cod3r}.
+    \\
+    Caracerísticas:
+    \begin{itemize}
+        \item Linguagem compilada\cite[1]{cod3r};
+        \item Fortemente Tipada\cite[4]{cod3r};
+        \item Código livre e aberto\cite[4]{cod3r};
+        \item Tempo de compilação otimizado\cite[4]{cod3r};
+        \item Garbage Collector\cite[4]{cod3r};
+        \item Linguam mínima\cite[4]{cod3r};
+        \item C-like\cite[4]{cod3r};
+        \item Não é OO, porém possui métodos e interfaces\cite[4]{cod3r};
+        \item Concorrência com goroutines\cite[4]{cod3r};
+    \end{itemize}
+\end{flushleft}
+
+\chapter{Configurando ambiente}
+\section{Instalando GO}
+Seguir as instruções de acordo com seu sistema operaional em: \link{https://golang.org/dl/}{Download}.
+\dica{
+    GOPATH é a variável de ambiente onde indica aonde estão os códigos go\cite[15]{igo}.
+}
+\dica{
+    O comando \texttt{go env} lista todas variáveis de ambiente.
+}
+
+
+\section{Editores e IDEs}
+\begin{itemize}
+    \item \link{https://code.visualstudio.com/}{Visual Studio Code}: Linux, Windows e Mac;
+    \item \link{https://www.vim.org/download.php}{Vim}: Linux, Windows e Mac\footnotemark[1];
+    \item \link{https://github.com/neovim/neovim/wiki/Installing-Neovim}{NeoVim}: Linux, Windows e Mac\footnotemark[1];
+    \item \link{https://atom.io/}{Atom}: Linux, Windows e Mac.
+\end{itemize}
+\footnotetext[1]{\link{https://github.com/fatih/vim-go}{Plugin}}
+\end{document}
