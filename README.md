@@ -10,11 +10,11 @@ Apostilas pessoais de estudo com meus resumos e explicações sobre determinado 
 
 ```shell
 cd assunto
-pdflatex assunto_postila
-pdflatex assunto_postila
-bibtex assunto_postila
-pdflatex assunto_postila
-pdflatex assunto_postila
+pdflatex assunto_apostila
+pdflatex assunto_apostila
+bibtex assunto_apostila
+pdflatex assunto_apostila
+pdflatex assunto_apostila
 ```
 
 ### Organização de pastas
@@ -52,7 +52,7 @@ Dentro de cada repositorio EAD, com exceção de projeto unicamente de exemplos,
 
 |  Tipo  | Empresa/Editora |     Autores     | Nome |
 | ------ | --------------- | --------------- | ---- |
-| :feet: |  Casa do código |                 | [Programando em Go](https://gitlab.com/nenitf/ead-go) |
+| :feet: |                 |                 | [Programando em Go](https://gitlab.com/nenitf/ead-go) |
 | :book: |  Casa do código |  Caio Filipini  | [Programando em Go](https://gitlab.com/nenitf/ead-programando-em-go) |
 |:school:|  School of net  | Wesley Willians | [Iniciando com Go](https://gitlab.com/nenitf/ead-iniciando-com-go)
 |:school:|  School of net  | Wesley Willians | [Iniciando com Go OO](https://gitlab.com/nenitf/ead-iniciando-com-go-oo)
