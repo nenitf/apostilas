@@ -24,6 +24,7 @@ pdflatex assunto_apostila
         * assunto_apostila.tex ``arquivo que gera pdf``
         * assunto_apostila.bib ``referências bibliográficas, criar mesmo que em branco``
         * assunto_apostila.pdf ``apostila final``
+        * README.md ``instruções e todo list de tópicos planejados do assunto``
         * (.aux .toc .bbl .log .out ...) ``arquivos gerados durante compilação``
             * imgs/
                 * (.png .jpeg ...) ``imagens usadas no capítulo``
@@ -35,6 +36,17 @@ Graphviz é um programa que pode ler ``.dot`` e ``.gv`` e transformar em imagens
 ```shell
 dot -Tpng -O arquivo.gv
 ```
+
+## Assuntos planejados
+* [ ] Go **em andamento**
+* [ ] PHP
+* [ ] Javascript **em andamento**
+* [ ] Python
+* [ ] Godot (engine e linguagem)
+
+## TODO
+* [ ] Criar forma para copiar identação junto com snippet de códigos na classe apostila.cls
+
 
 ## Estudos Ativos Documentados
 Paralelo a criação de apostilas, também crio exemplos e escrevo exercicíos práticos de livros e cursos que consumo.

@@ -12,7 +12,10 @@
 *-blx.bib
 *.fdb_latexmk
 *.fls
+*.lof
 *.log
+*.lol
+*.lot
 *.maf
 *.mtc
 *.mtc0

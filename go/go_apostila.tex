@@ -1,5 +1,4 @@
 \documentclass{apostila}
-% cp ~/dev/dotfiles/cpfiles/latex/apostila.cls apostila.cls
 
 \title{GO}
 \author{Neni}
@@ -25,16 +24,25 @@
     \end{itemize}
 \end{flushleft}
 
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \chapter{Configurando ambiente}
 \section{Instalando GO}
 Seguir as instruções de acordo com seu sistema operaional em: \link{https://golang.org/dl/}{Download}.
 \dica{
-    GOPATH é a variável de ambiente onde indica aonde estão os códigos go\cite[15]{igo}.
-}
-\dica{
-    O comando \texttt{go env} lista todas variáveis de ambiente.
+    GOPATH é a variável de ambiente que indica o local dos códigos go\cite[15]{igo}.\\
+    GOROOT é a variavel de ambiente que indica o local de instalação do go (compilador e ferramentas)\cite[7]{cod3r}
 }
 
+%\codefile{go}{exemplos/teste.go}
 
 \section{Editores e IDEs}
 \begin{itemize}
@@ -44,4 +52,243 @@ Seguir as instruções de acordo com seu sistema operaional em: \link{https://go
     \item \link{https://atom.io/}{Atom}: Linux, Windows e Mac.
 \end{itemize}
 \footnotetext[1]{\link{https://github.com/fatih/vim-go}{Plugin}}
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Ferramentas Go}
+
+\begin{table}[h]
+\centering
+\caption{Ferramentas go}
+\vspace{0.5cm}
+\begin{tabular}{r|l}
+ 
+Comando 	& Descrição	\\
+\hline
+build 		& Compila pacote main       \\
+clean		&  \\
+doc 		& go doc [package] exibe documentação do pacote\cite[78]{goia}.        \\
+    env 		& Informações sobre ambiente do go instalado\cite[9]{cod3r}.       \\
+bug 		&        \\
+fix 		&        \\
+fmt 		& Formata o arquivo .go\cite[77]{goia}       \\
+generate 	&        \\
+get 		& Download de pacotes a partir do caminho de importação\cite[9]{cod3r}. Usado para baixar do github\cite[9]{cod3r}.       \\
+install 	&        \\
+list 		&        \\
+run 		& Compila e executa pacote main\cite[76]{goia}       \\
+test 		&       \\
+tool 		&       \\
+version 	&       \\
+vet 		& Verifica erros no código\cite[9]{cod3r}.  \\
+c			&       \\
+buildmode 	&       \\
+cache 		&       \\
+filetype 	&       \\
+gopath 		&       \\
+enviroment 	&       \\
+importpath 	&       \\
+packages    &       \\
+testflag    &       \\
+testfunc    & 
+ 
+\end{tabular}
+\end{table}
+
+\dica{Digitando \texttt{go} é possível ver todas as ferramentas da linguagem.}
+\dica{O comando \texttt{godoc -http=:6060} cria servidor web com documentação de pacotes\cite[78]{goia}}
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Funções e packages}
+\section{Estrutura de um arquivo GO}
+A estrutura comum de um arquivo possui 3 partes: Declaração de pacote, importe de pacotes/bibliotecas e funções - nessa ordem. Abaixo exemplos comentados (\texttt{//} ou  \texttt{/* */} comentam códigos Go).
+
+\begin{lstlisting}[language=go,caption=Estrutura de um arquivo.go]
+// declaração de pacote
+package main
+
+// importe de pacotes/bibliotecas
+import (
+    "fmt"
+    "os"
+)
+
+// Funções
+func main(){
+    // algoritmo
+}
+
+func abcde(){
+    // algoritmo
+}
+\end{lstlisting}
+
+
+
+\section{Funções}
+Função é um bloco de código nomeado com algoritmo que pode tanto receber (parâmetros) quanto retornar 0 ou mais valores\cite[15]{cod3r}. Por pasta/pacote não devem haver funções com nome repetido\cite[8]{cod3r} - Go não possui sobrecarga de métodos.
+
+\begin{lstlisting}[language=go,caption=Funções]
+package main
+
+import "fmt"
+
+func main(){
+    // fmt.Print exibe resultado da função divideValor
+    fmt.Print(divideValor(4, 2))
+
+    // fmt.Print exibe resultado da função somaValores
+    fmt.Print(somaValores(4, 2))
+}
+
+// Recebe dois valores e retorna um
+func divideValor(n1 int, n2 int) float64 {
+    // Retorna resultado da divisão
+    return n1/n2
+}
+
+// Recebe quantidade indefinida de valores (função variática) e retorna um
+func somaValores(nums ...int) float64 {
+    // Variável incrementada com os valores
+    total := 0
+
+    // Loop pela quantidade de numeros passados
+    for _, num := range nums {
+        // total = total + num
+        total += num
+    }
+
+    // Retorna total
+    return total
+}
+\end{lstlisting}
+
+\section{Packages}
+Pacotes são a maneira de Go organizar e reutilizar código\cite[18]{igo}. Há dois tipos de programa em Go: executáveis e bibliotecas\cite[18]{igo}.
+
+\begin{itemize}
+    \item Executaveis necessitam de um arquivo com pacote main declarado e uma função main\cite[8]{cod3r}.
+    \item Bibliotecas são arquivos que podem ser reutilizados emqualquer projeto quando importados. Funções, variáveis e tipos  podem ser visíveis caso seu nome comece com letra maiúscula\cite[106]{igo}.
+\end{itemize}
+
+\begin{lstlisting}[language=go,caption=Executável]
+package main
+
+func main(){
+    // ...
+}
+\end{lstlisting}
+
+\begin{lstlisting}[language=go,caption=Biblioteca em \$GOPATH/src/github.com/nenitf/abcdef]
+// Nome do package
+package abcdef
+
+// Função exposta (letra inicial maiúscula)
+// Pode ser usada por um exeutável
+func ProximaLetraAlfabeto(){
+    // ...
+}
+
+// Função oculta (letra inicial minúscula)
+// Só pode ser usada dentro da própria bilioteca
+func loopAlfabeto(){
+    // ...
+}
+\end{lstlisting}
+
+\begin{lstlisting}[language=go,caption=Executável utilizando biblioteca abcdef]
+package main
+
+// importando pacote
+import "github.com/nenitf/abcdef"
+
+func main(){
+    absdef.ProximaLetraAlfabeto()
+}
+\end{lstlisting}
+Go possui uma série de pacotes próprios que podem ser importados, no capítulo \ref{main lib} os mais usuais são explicados.
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Documentando}
+Para documentar pacotes, funções, variáveis e tipos visíveis, basta comentar imediatamente acima da declaração\cite[80]{goia}.
+
+\begin{lstlisting}[language=go,caption={Documentando pacote, variaveis, funcoes e tipos}]
+package ccord
+
+// GMStoUTM converte coordenada GMS para UTM
+func GMStoUTM() {
+	// ...
+}
+\end{lstlisting}
+
+\dica{Pode criar arquivo doc.go no diretório do seu pacote únicamente para documentá-lo\cite[81]{goia}}.
+
+\begin{lstlisting}[language=go,caption=Documentando pacotes]
+/*
+    Pacote responsável por
+    calculos com coordenadas
+*/
+package ccord
+\end{lstlisting}
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Main packages}
+\label{main lib}
+Funções mais usuais dos pacotes mais comuns da biblioteca padrão do Go.
+\section{fmt}
+\section{os}
+\section{flag}
+\section{http}
+\section{log}
+\section{strings}
+
+\chapter{Variáveis e tipos}
+\chapter{Arrays e slices}
+\chapter{Fluxo de controle}
+\chapter{Loops}
+\chapter{Estruturas e interfaces}
+\chapter{Ponteiros}
+\chapter{Concorrência}
+\chapter{Testes}
+\chapter{Benchmarks}
+
+
 \end{document}
