@@ -1,28 +1,26 @@
 \documentclass{apostila}
 
-\title{GO}
+\title{Go}
 \author{Neni}
 \date{\today}
 
 \begin{document}
 \chapter{O que é GO}
-\begin{flushleft}
 
-    Golang é uma linguagem de programação criada pela Google para resolver seus problemas\cite[1]{cod3r}. Desenvolvida por Robert Griesemer, Rob Pike e Ken Thompson em 11/2009\cite[4]{cod3r}.
-    \\
-    Caracerísticas:
-    \begin{itemize}
-        \item Linguagem compilada\cite[1]{cod3r};
-        \item Fortemente Tipada\cite[4]{cod3r};
-        \item Código livre e aberto\cite[4]{cod3r};
-        \item Tempo de compilação otimizado\cite[4]{cod3r};
-        \item Garbage Collector\cite[4]{cod3r};
-        \item Linguam mínima\cite[4]{cod3r};
-        \item C-like\cite[4]{cod3r};
-        \item Não é OO, porém possui métodos e interfaces\cite[4]{cod3r};
-        \item Concorrência com goroutines\cite[4]{cod3r};
-    \end{itemize}
-\end{flushleft}
+Golang é uma linguagem de programação criada pela Google para resolver seus problemas\cite[1]{cod3r}. Desenvolvida por Robert Griesemer, Rob Pike e Ken Thompson em 11/2009\cite[4]{cod3r}.
+\\
+Caracerísticas:
+\begin{itemize}
+    \item Linguagem compilada\cite[1]{cod3r};
+    \item Fortemente Tipada\cite[4]{cod3r};
+    \item Código livre e aberto\cite[4]{cod3r};
+    \item Tempo de compilação otimizado\cite[4]{cod3r};
+    \item Garbage Collector\cite[4]{cod3r};
+    \item Linguam mínima\cite[4]{cod3r};
+    \item C-like\cite[4]{cod3r};
+    \item Não é OO, porém possui métodos e interfaces\cite[4]{cod3r};
+    \item Concorrência com goroutines\cite[4]{cod3r};
+\end{itemize}
 
 
 
@@ -44,7 +42,7 @@ Seguir as instruções de acordo com seu sistema operaional em: \link{https://go
 
 %\codefile{go}{exemplos/teste.go}
 
-\section{Editores e IDEs}
+\section{Editores/plugins e IDEs}
 \begin{itemize}
     \item \link{https://code.visualstudio.com/}{Visual Studio Code}: Linux, Windows e Mac;
     \item \link{https://www.vim.org/download.php}{Vim}: Linux, Windows e Mac\footnotemark[1];
@@ -65,41 +63,41 @@ Seguir as instruções de acordo com seu sistema operaional em: \link{https://go
 \chapter{Ferramentas Go}
 
 \begin{table}[h]
-\centering
-\caption{Ferramentas go}
-\vspace{0.5cm}
-\begin{tabular}{r|l}
- 
-Comando 	& Descrição	\\
-\hline
-build 		& Compila pacote main       \\
-clean		&  \\
-doc 		& go doc [package] exibe documentação do pacote\cite[78]{goia}.        \\
-    env 		& Informações sobre ambiente do go instalado\cite[9]{cod3r}.       \\
-bug 		&        \\
-fix 		&        \\
-fmt 		& Formata o arquivo .go\cite[77]{goia}       \\
-generate 	&        \\
-get 		& Download de pacotes a partir do caminho de importação\cite[9]{cod3r}. Usado para baixar do github\cite[9]{cod3r}.       \\
-install 	&        \\
-list 		&        \\
-run 		& Compila e executa pacote main\cite[76]{goia}       \\
-test 		&       \\
-tool 		&       \\
-version 	&       \\
-vet 		& Verifica erros no código\cite[9]{cod3r}.  \\
-c			&       \\
-buildmode 	&       \\
-cache 		&       \\
-filetype 	&       \\
-gopath 		&       \\
-enviroment 	&       \\
-importpath 	&       \\
-packages    &       \\
-testflag    &       \\
-testfunc    & 
- 
-\end{tabular}
+    \centering
+    \caption{Ferramentas go}
+    \vspace{0.5cm}
+    \begin{tabular}{r|l}
+
+        Comando 	& Descrição	\\
+        \hline
+        build 		& Compila pacote main       \\
+        clean		&  \\
+        doc 		& go doc [package] exibe documentação do pacote\cite[78]{goia}.        \\
+        env 		& Informações sobre ambiente do go instalado\cite[9]{cod3r}.       \\
+        bug 		&        \\
+        fix 		&        \\
+        fmt 		& Formata o arquivo .go\cite[77]{goia}       \\
+        generate 	&        \\
+        get 		& Download de pacotes a partir do caminho de importação\cite[9]{cod3r}. Usado para baixar do github\cite[9]{cod3r}.       \\
+        install 	&        \\
+        list 		&        \\
+        run 		& Compila e executa pacote main\cite[76]{goia}       \\
+        test 		&       \\
+        tool 		&       \\
+        version 	&       \\
+        vet 		& Verifica erros no código\cite[9]{cod3r}.  \\
+        c			&       \\
+        buildmode 	&       \\
+        cache 		&       \\
+        filetype 	&       \\
+        gopath 		&       \\
+        enviroment 	&       \\
+        importpath 	&       \\
+        packages    &       \\
+        testflag    &       \\
+        testfunc    & 
+
+    \end{tabular}
 \end{table}
 
 \dica{Digitando \texttt{go} é possível ver todas as ferramentas da linguagem.}
@@ -125,8 +123,8 @@ package main
 
 // importe de pacotes/bibliotecas
 import (
-    "fmt"
-    "os"
+"fmt"
+"os"
 )
 
 // Funções
@@ -243,7 +241,7 @@ package ccord
 
 // GMStoUTM converte coordenada GMS para UTM
 func GMStoUTM() {
-	// ...
+    // ...
 }
 \end{lstlisting}
 
@@ -251,8 +249,8 @@ func GMStoUTM() {
 
 \begin{lstlisting}[language=go,caption=Documentando pacotes]
 /*
-    Pacote responsável por
-    calculos com coordenadas
+Pacote responsável por
+calculos com coordenadas
 */
 package ccord
 \end{lstlisting}
