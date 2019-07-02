@@ -38,11 +38,11 @@ dot -Tpng -O arquivo.gv
 ```
 
 ## Assuntos planejados
-* [ ] Go **em andamento**
+* [ ] Go **parado**
 * [ ] PHP
 * [ ] Javascript **em andamento**
 * [ ] Python
-* [ ] Godot (engine e linguagem)
+* [ ] Godot (engine e linguagem) **parado**
 
 ## TODO
 * [ ] Criar forma para copiar identação junto com snippet de códigos na classe apostila.cls
