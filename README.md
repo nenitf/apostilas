@@ -47,7 +47,7 @@ Graphviz é um programa que pode ler ``.dot`` e ``.gv`` e transformar em imagens
 dot -Tpng -O arquivo.gv
 ```
 
-## Assuntos planejados
+## Assuntos concluídos
 * [ ] Go **parado**
 * [ ] PHP
 * [ ] Javascript **em andamento**
