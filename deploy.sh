@@ -6,19 +6,20 @@ set -e
 # build
 BASEDIR=$(dirname "$0")
 rm -rf $BASEDIR/dist
-mkdir $BASEDIR/dist
-for f in */*_apostila.pdf; do cp -t ./dist "$f"; done
+rm -rf $BASEDIR/tmp
+mkdir -p tmp
+for f in */*_apostila.pdf; do cp -f -t "$BASEDIR/tmp" "$f"; done
+git clone -b pdfs git@github.com:nenitf/apostilas.git dist
+for f in tmp/*_apostila.pdf; do cp -f -t "$BASEDIR/dist/" "$f"; done
 
 # navigate into the build output directory
 cd dist
-
-echo '# apostilas em pdf' > README.md
 
 git init
 git add -A
 git commit -m 'deploy :octocat:'
 
 # if you are deploying to https://<USERNAME>.github.io
-git push -f git@github.com:nenitf/apostilas.git master:pdfs
+git push -f origin pdfs
 
 cd -

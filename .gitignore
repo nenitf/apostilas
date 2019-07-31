@@ -33,6 +33,7 @@ __pycache__/
 .DS_Store
 node_modules
 /dist
+/tmp
 /tests/e2e/reports/
 selenium-debug.log
 # local env files
