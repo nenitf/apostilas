@@ -19,8 +19,9 @@ pdflatex assunto_apostila
 
 ### Organização de pastas
 * apostilas/ ``inicio do repositório``
+    * apostila.cls ``classe padrão para apostilas``
     * assunto/ ``assunto a ser abordado, e.g. go``
-        * apostila.cls ``apostila modelo que será usada``
+        * apostila.cls ``modelo da apostila usada no assunto``
         * assunto_apostila.tex ``arquivo que gera pdf``
         * assunto_apostila.bib ``referências bibliográficas, criar mesmo que em branco``
         * assunto_apostila.pdf ``apostila final``
@@ -29,7 +30,13 @@ pdflatex assunto_apostila
             * imgs/
                 * (.png .jpeg ...) ``imagens usadas no capítulo``
                 * (.dot .gv ...) ``códigos fonte de imagens usadas no capítulo``
-    * README.md ``você está aqui``
+    * README.md
+
+**obs**: Cada assunto pode obter um modelo diferente de formatação do documento (``apostila.cls``), porém caso seja possível será utilizado o template menos específico (``apostila.cls`` da raiz do projeto). Para usá-lo é interessante criar um link simbólico:
+```shell
+cd apostilas # raiz do projeto
+ln -t assunto apostila.cls
+```
 
 ### Uso de graphviz
 Graphviz é um programa que pode ler ``.dot`` e ``.gv`` e transformar em imagens, facilitando a criação de diagramas.
