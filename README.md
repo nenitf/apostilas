@@ -48,6 +48,7 @@ dot -Tpng -O arquivo.gv
 * [ ] Go **parado**
 * [ ] PHP
 * [ ] Javascript **em andamento**
+* [ ] Git **em andamento**
 * [ ] Python
 * [ ] Godot (engine e linguagem) **parado**
 
