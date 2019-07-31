@@ -1,8 +1,8 @@
 # apostilas
 Apostilas pessoais de estudo com meus resumos e explicações sobre determinado assunto, igual a um caderno de escola porém compilado com LaTeX.
 
-## Posso baixar as apostilas?
-Atualmente todas são convertidas somente para pdf e disponibilizadas junto com seu "código bruto" no diretório de seu respectivo assunto. A apostila de Go, por exemplo, é go/go_apostila.pdf. Sinta-se livre para consumir o conteúdo.
+## Posso baixar as apostilas? Aonde estão?
+Sim, todas estão em pdf na branch [pdfs](https://github.com/nenitf/apostilas/tree/pdfs).
 
 ## Funcionamento do projeto
 ### Compilando pdf
@@ -27,7 +27,7 @@ pdflatex assunto_apostila
         * apostila.cls ``modelo da apostila usada no assunto``
         * assunto_apostila.tex ``arquivo que gera pdf``
         * assunto_apostila.bib ``referências bibliográficas, criar mesmo que em branco``
-        * assunto_apostila.pdf ``apostila final``
+        * assunto_apostila.pdf ``apostila final que será movida para a master``
         * README.md ``instruções e todo list de tópicos planejados do assunto``
         * (.aux .toc .bbl .log .out ...) ``arquivos gerados durante compilação``
             * imgs/
