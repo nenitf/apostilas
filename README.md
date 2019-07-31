@@ -1,7 +1,10 @@
 # apostilas
 Apostilas pessoais de estudo com meus resumos e explicações sobre determinado assunto, igual a um caderno de escola porém compilado com LaTeX.
 
-## Workflow
+## Posso baixar as apostilas?
+Atualmente todas são convertidas somente para pdf e disponibilizadas junto com seu "código bruto" no diretório de seu respectivo assunto. A apostila de Go, por exemplo, é go/go_apostila.pdf. Sinta-se livre para consumir o conteúdo.
+
+## Funcionamento do projeto
 ### Compilando pdf
 1. Acessar diretório do assunto;
 2. É necessário compilar duas vezes para a toc (sumário) ser atualizada pelo arquivo ``.aux``;
