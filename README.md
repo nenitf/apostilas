@@ -57,29 +57,3 @@ dot -Tpng -O arquivo.gv
 
 ## TODO
 * [ ] Criar forma para copiar identação junto com snippet de códigos na classe apostila.cls
-
-
-## Estudos Ativos Documentados
-Paralelo a criação de apostilas, também crio exemplos e escrevo exercicíos práticos de livros e cursos que consumo.
-Dentro de cada repositorio EAD, com exceção de projeto unicamente de exemplos, terão diretórios com o padrão "``numero``_``titulo-do-assunto``". Sendo ``numero`` referenciando a página ou aula de inicio do código e ``titulo-do-assunto``, de cunho pessoal, o objetivo do desenvolvimento.
-
-### Legendas
-* :book: Livro
-* :school: Curso
-* :feet: Exemplos
-
-### Index
-* [Go](https://gitlab.com/nenitf/apostilas#go)
-
-### Go
-
-|  Tipo  | Empresa/Editora |     Autores     | Nome |
-| ------ | --------------- | --------------- | ---- |
-| :feet: |                 |                 | [Exemplos](https://gitlab.com/nenitf/ead-go)
-| :book: |  Casa do código |  Caio Filipini  | [Programando em Go](https://gitlab.com/nenitf/ead-programando-em-go)
-|:school:|  School of net  | Wesley Willians | [Iniciando com Go](https://gitlab.com/nenitf/ead-iniciando-com-go)
-|:school:|  School of net  | Wesley Willians | [Iniciando com Go OO](https://gitlab.com/nenitf/ead-iniciando-com-go-oo)
-|:school:|  School of net  | Wesley Willians | [Avançando com GO](https://gitlab.com/nenitf/ead-avancando-com-go)
-|:school:|  School of net  | Wesley Willians | [Iniciando com GO WEB](https://gitlab.com/nenitf/ead-iniciando-com-go-web)
-|:school:|   Cod3r/Udemy   | Leonardo Leitão | [Explorando a Linguagem do Google](https://gitlab.com/nenitf/ead-go-cod3r)
-|:school:| Greater Commons |   Ellen Körbes  | [A Linguagem Go](https://gitlab.com/nenitf/ead-go-greatercommons)
