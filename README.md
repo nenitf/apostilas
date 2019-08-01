@@ -12,12 +12,16 @@ Sim, todas estão em pdf na branch [pdfs](https://github.com/nenitf/apostilas/tr
 4. Após a bibliografia existir é necessário compilar mais duas vezes para atualizar o documento e a toc.
 
 ```shell
+# manualmente
 cd assunto
 pdflatex assunto_apostila
 pdflatex assunto_apostila
 bibtex assunto_apostila
 pdflatex assunto_apostila
 pdflatex assunto_apostila
+
+# com script b
+./b assunto
 ```
 
 ### Organização de pastas
