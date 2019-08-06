@@ -18,8 +18,10 @@ set -e
 
 # Caso seja passado o assunto/diretório
 if [ ! -z "$1" ]; then
+  # Encontra local em que o script ./b está para então ir para o assunto
   BASEDIR=$(dirname "$0")
   ASSUNTODIR=$BASEDIR/$1
+
   cd $ASSUNTODIR
 fi
 
