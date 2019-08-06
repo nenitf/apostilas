@@ -7,6 +7,8 @@
 #		Automatiza compilação de pdflatex e bibtex
 #
 # Como usar:
+#   1. ./b assunto
+#   ou
 #   1. Acessar diretório com arquivo .tex
 #		2. digitar: ../b
 # -------------------------------------------- #
@@ -14,8 +16,13 @@
 # abort on errors
 set -e
 
-ASSUNTODIR=$BASEDIR/$1
-cd $PWD
+# Caso seja passado o assunto/diretório
+if [ ! -z "$1" ]; then
+  BASEDIR=$(dirname "$0")
+  ASSUNTODIR=$BASEDIR/$1
+  cd $ASSUNTODIR
+fi
+
 APOSTILA=$(find *.tex | awk -F '.' '{print $1}')
 pdflatex -halt-on-error $APOSTILA
 pdflatex -halt-on-error $APOSTILA
