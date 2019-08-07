@@ -5,11 +5,14 @@ Apostilas pessoais de estudo com meus resumos e explicações sobre determinado 
 Sim, todas estão em pdf na branch [pdfs](https://github.com/nenitf/apostilas/tree/pdfs).
 
 ## Funcionamento do projeto
-### Compilando pdf
+### Uso do LaTeX e BibTeX
+[LaTeX](https://latex.net.br/faq/) é a ferramenta utilizada para gerar pdfs enquanto que o [BibTeX](http://www.bibtex.org/) complementa a formatação de bibliografias.
+
+#### Gerando pdf
 1. Acessar diretório do assunto;
-2. É necessário compilar duas vezes para a toc (sumário) ser atualizada pelo arquivo `.aux`;
-3. Para compilar bibliografia é com `bibtex`;
-4. Após a bibliografia existir é necessário compilar mais duas vezes para atualizar o documento e a toc.
+1. É necessário compilar duas vezes para a toc (sumário) ser atualizada pelo arquivo `.aux`;
+1. Para compilar bibliografia é com `bibtex`;
+1. Após a bibliografia existir é necessário compilar mais duas vezes para atualizar o documento e a toc.
 
 ```shell
 # manualmente
@@ -47,7 +50,7 @@ ln -t assunto apostila.cls
 ```
 
 ### Uso de graphviz
-Graphviz é um programa que pode ler `.gv` e transformar em `.png`, facilitando a criação de diagramas.
+[Graphviz](https://www.graphviz.org/documentation/) é um programa que pode ler `.gv` e transformar em `.png`, facilitando a criação de diagramas. [Testa aí](https://dreampuf.github.io/GraphvizOnline).
 ```shell
 # manualmente
 cd assunto/imgs
