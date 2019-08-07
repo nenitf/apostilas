@@ -63,6 +63,14 @@ cd assunto/imgs
 ../i imgs/arquivo.gv
 ```
 
+## Meu fluxo de trabalho
+Separo três workspaces, sendo eles para:
+1. Compilar e visualizar o pdf
+  - ``../b; zathura *.pdf``
+1. Gerar e visualizar gráficos
+  - ``../../i; feh arquivo.gv``
+1. Escrever apostila
+
 ## Assuntos concluídos
 * [ ] Go **parado**
 * [ ] PHP
