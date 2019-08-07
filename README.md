@@ -21,7 +21,8 @@ pdflatex assunto_apostila
 pdflatex assunto_apostila
 
 # com script b
-./b assunto
+cd assunto
+../b
 ```
 
 ### Organização de pastas
@@ -36,7 +37,7 @@ pdflatex assunto_apostila
         * (.aux .toc .bbl .log .out ...) ``arquivos gerados durante compilação``
             * imgs/
                 * (.png .jpeg ...) ``imagens usadas no capítulo``
-                * (.dot .gv ...) ``códigos fonte de imagens usadas no capítulo``
+                * (.gv) ``códigos fonte de imagens usadas no capítulo``
     * README.md
 
 **obs**: Cada assunto pode obter um modelo diferente de formatação do documento (``apostila.cls``), porém caso seja possível será utilizado o template menos específico (``apostila.cls`` da raiz do projeto). Para usá-lo é interessante criar um link simbólico:
@@ -46,9 +47,20 @@ ln -t assunto apostila.cls
 ```
 
 ### Uso de graphviz
-Graphviz é um programa que pode ler ``.dot`` e ``.gv`` e transformar em imagens, facilitando a criação de diagramas.
+Graphviz é um programa que pode ler `.gv` e transformar em `.png`, facilitando a criação de diagramas.
 ```shell
+# manualmente
+cd assunto/imgs
 dot -Tpng -O arquivo.gv
+
+# com script i para compilar todos os arquivos.gv
+# necessário estar no diretório dos arquivos
+cd assunto/imgs
+../../i
+
+# com script i para converter um arquivo.gv específico
+# NÃO é necessário estar no diretório do arquivo
+../i imgs/arquivo.gv
 ```
 
 ## Assuntos concluídos
