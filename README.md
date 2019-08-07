@@ -7,8 +7,8 @@ Sim, todas estão em pdf na branch [pdfs](https://github.com/nenitf/apostilas/tr
 ## Funcionamento do projeto
 ### Compilando pdf
 1. Acessar diretório do assunto;
-2. É necessário compilar duas vezes para a toc (sumário) ser atualizada pelo arquivo ``.aux``;
-3. Para compilar bibliografia é com ``bibtex``;
+2. É necessário compilar duas vezes para a toc (sumário) ser atualizada pelo arquivo `.aux`;
+3. Para compilar bibliografia é com `bibtex`;
 4. Após a bibliografia existir é necessário compilar mais duas vezes para atualizar o documento e a toc.
 
 ```shell
@@ -40,7 +40,7 @@ cd assunto
                 * (.gv) ``códigos fonte de imagens usadas no capítulo``
     * README.md
 
-**obs**: Cada assunto pode obter um modelo diferente de formatação do documento (``apostila.cls``), porém caso seja possível será utilizado o template menos específico (``apostila.cls`` da raiz do projeto). Para usá-lo é interessante criar um link simbólico:
+**obs**: Cada assunto pode obter um modelo diferente de formatação do documento (`apostila.cls`), porém caso seja possível será utilizado o template menos específico (`apostila.cls` da raiz do projeto). Para usá-lo é interessante criar um link simbólico:
 ```shell
 cd apostilas # raiz do projeto
 ln -t assunto apostila.cls
